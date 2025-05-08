@@ -1,0 +1,23 @@
+### Create Role
+POST http://localhost:8081/roles
+Content-Type: application/json
+
+{
+  "roleName": "STUDENT"
+}
+
+### Create User
+POST http://localhost:8081/users
+Content-Type: application/json
+
+{
+  "name": "Mustakim Bin Mohsin",
+  "email": "bsse1405@iit.du.ac.bd"
+}
+
+
+### Assign Role
+POST http://localhost:8081/users/{{userId}}/assign-role/{{roleId}}
+
+### Get User
+GET http://localhost:8081/users/{{userId}}
